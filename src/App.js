@@ -13,7 +13,7 @@ function App() {
   const user = localStorage.getItem("token");
   return (
         <>
-          {user || history.path == '/login' ? <Header /> : ''}
+          {user || history.path === '/login' ? <Header /> : ''}
           <Routes history={history} >
             {user && <Route path="/" exact element={<Main />} />}
             <Route path="/signup" exact element={<SignUp />} />
