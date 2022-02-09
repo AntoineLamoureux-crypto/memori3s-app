@@ -67,7 +67,7 @@ function Memories() {
           notes: memo.notes,
           selectedFile: encodedSelectedFile
         };
-        axios.post('http://localhost:3001/newMemo', newFood)
+        axios.post('https://memories-back3nd.herokuapp.com/newMemo', newFood)
         setMemo({
           user: '',
           title: "",
@@ -77,13 +77,13 @@ function Memories() {
       }
     
       function deleteMemo(id) {
-        axios.delete("/delete/" + id);
+        axios.delete("https://memories-back3nd.herokuapp.com/delete/" + id);
         alert("Memory deleted");
         console.log(`Deleted memory with id ${id}`);
       }
     
       function updateMemo(id) {
-        axios.put("/put/" + id, updatedMemo);
+        axios.put("https://memories-back3nd.herokuapp.com/put/" + id, updatedMemo);
         alert("Memory updated");
         console.log(`Memory with id ${id} updated`);
         setUpdatedMemo({
@@ -106,7 +106,7 @@ function Memories() {
       }
     
       function updateMemo(id) {
-          axios.put('/put/' + id, updatedMemo)
+          axios.put('https://memories-back3nd.herokuapp.com/put/' + id, updatedMemo)
           alert("Food updated !")
           setIsPut(false)
     

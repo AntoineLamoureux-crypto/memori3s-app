@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://memories-back3nd.herokuapp.com/",
-  "dependencies": {
+  "dependencies": { 
     "@chakra-ui/icons": "^1.1.5",
     "@chakra-ui/react": "^1.8.1",
     "@emotion/react": "^11.7.1",
