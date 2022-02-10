@@ -1,4 +1,1 @@
-[build]
-  publish = "build"
-  command = "echo 'default context'"
-  functions = "functions"
+[build] command = "CI= npm run build"
