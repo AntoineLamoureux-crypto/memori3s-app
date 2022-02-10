@@ -17,7 +17,7 @@ function AllMemories() {
 
     useEffect(() => {
         const _id = JSON.parse(localStorage.getItem('currentUser'))._id
-        if (memos === null) {
+        if (memos.length < 0) {
         fetch(`https://memories-back3nd.herokuapp.com/memos/${_id}`)
         .then(response => response.json())
         .then(data => {
