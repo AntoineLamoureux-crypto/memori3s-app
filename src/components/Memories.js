@@ -60,14 +60,15 @@ function Memories() {
       function addMemo(event) {
         event.preventDefault()
         const userId = JSON.parse(localStorage.getItem('currentUser'))._id;
-        const encodedSelectedFile = btoa(memo.selectedFile)
-        const newFood = {
+        const formData = new FormData();
+        formData.append('selectedFile', memo.selectedFile);
+        const newMemo = {
           user: userId,
           title: memo.title,
           notes: memo.notes,
-          selectedFile: encodedSelectedFile
+          selectedFile: formData
         };
-        axios.post('https://memories-back3nd.herokuapp.com/newMemo', newFood)
+        axios.post('https://memories-back3nd.herokuapp.com/newMemo', newMemo)
         setMemo({
           user: '',
           title: "",
