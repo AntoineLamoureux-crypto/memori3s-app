@@ -17,6 +17,7 @@ function AllMemories() {
 
     useEffect(() => {
         const _id = JSON.parse(localStorage.getItem('currentUser'))._id
+        if (memos === null) {
         fetch(`https://memories-back3nd.herokuapp.com/memos/${_id}`)
         .then(response => response.json())
         .then(data => {
@@ -26,7 +27,9 @@ function AllMemories() {
           setMemos(data)
         })
         .catch((err) => console.log(err))
+        }
       }, [memos]);
+      
 
   return <>
    <Grid templateColumns={'repeat(2, 1fr)'} gap={'5'} alignContent={'center'} mb='10' mx={'5'}>

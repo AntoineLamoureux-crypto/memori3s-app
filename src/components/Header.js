@@ -27,8 +27,9 @@ function Header() {
         </Heading>
       </Flex>
       <Stack direction={{ base: "column", md: "row" }} width={{ base: "full", md: "auto" }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }}>
-        <Button variant="link" textColor={'white'} fontWeight={'bold'} _hover={{ textColor:'black', opacity:'1'}} fontSize={'20px'} mx={'3'} onClick={ () => navigate('/memories')} >Add Memory</Button>
-        <Button variant="link" textColor={'white'} fontWeight={'bold'} _hover={{ textColor:'black', opacity:'1'}} fontSize={'20px'} onClick={ () => navigate('/all-memories')} >View Memories</Button>
+        <Button variant="link" textColor={'white'} fontWeight={'bold'} _hover={{ textColor:'black', opacity:'1'}} fontSize={'20px'} onClick={ () => navigate('/memories')} >Add Memory</Button>
+        <Button variant="link" textColor={'white'} fontWeight={'bold'} _hover={{ textColor:'black', opacity:'1'}} fontSize={'20px'} pl={'3'} onClick={ () => navigate('/all-memories')} >View Memories</Button>
+        <Button variant="link" textColor={'white'} fontWeight={'bold'} _hover={{ textColor:'black', opacity:'1'}} fontSize={'20px'} pl={'3'} onClick={ () => navigate('/myAccount')} >Account</Button>
       </Stack>
       <Box mt={{ base: 4, md: 0 }}>
         <Button variant="outline" _hover={{ bg: "gray.200", textColor:'black'}} textColor={'white'} onClick={ onLogoutClick } >
