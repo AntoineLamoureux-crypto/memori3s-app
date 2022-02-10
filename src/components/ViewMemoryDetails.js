@@ -4,9 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import {
   Box,
-  Flex,
-  AspectRatio,
-  Image,
   Text,
   Link,
   Button,
